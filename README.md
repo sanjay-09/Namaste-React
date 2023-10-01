@@ -1,0 +1,17 @@
+# parcel
+-Dev Build
+-Local Server
+-HMR-Hot module Replacement
+-File Watching Algorithms
+-Caching
+-Image Optimization
+-Minification
+-Bundling
+-Compress
+-Consistent Hashing
+-Code Splitting
+-Differential Bundling-support older browsers
+-Diagnostic--
+-Error handling
+-https  
+-Tree shaking-remove unused codes

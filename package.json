@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "This is Namaste React by Sanjay Singh",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "repository": {
@@ -17,10 +19,16 @@
   "homepage": "https://github.com/sanjay-09/Namaste-React#readme",
   "devDependencies": {
     "parcel": "^2.9.3",
-    "process": "^0.11.10"
+    "postcss": "^8.4.30",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.3.3"
   },
+  "Browserslist": [
+    "last 2 versions"
+  ],
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.16.0"
   }
 }
