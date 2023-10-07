@@ -7,7 +7,7 @@ const ResCategory=(props)=>{
     const {setShowIndex}=props;
     const {itemCards}=data;
     const handleClick=()=>{
-        setShowIndex();
+        setShowIndex();  
                  
     }
     return(

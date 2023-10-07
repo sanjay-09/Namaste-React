@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState,useContext } from "react";
 import RestaurantCard, { withVegLabel } from "./RestaurantCard"
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 
 
@@ -11,7 +12,8 @@ console.log("Body");
     const [resList,setResList]=useState([]);
     const [text,setText]=useState("");
     const [filterRes,setFilterRes]=useState([]);
-    console.log(filterRes[0]?.info.isOpen);
+    const {loggedInUser,setUser}=useContext(UserContext);
+
 
     const RestaurantCardVeg = withVegLabel(RestaurantCard);
 
@@ -21,7 +23,7 @@ console.log("Body");
     
 
     useEffect(()=>{
-        console.log("We are fetching")
+        
         fetchData();
 
     },[]);
@@ -30,6 +32,7 @@ console.log("Body");
         console.log("fetchData")
         const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.3670355&lng=79.4304381&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const jsonData=await data.json();
+        console.log("h");
        setResList(jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
        setFilterRes(jsonData?.data?.cards[5]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
@@ -60,6 +63,7 @@ console.log("Body");
                      
                   }} className="my-1 bg-red-100 rounded-md">Top Rated Restaurant</button>
                   </div>
+                  
             </div>
     
             

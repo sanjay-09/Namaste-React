@@ -22,7 +22,7 @@ export const withVegLabel=(RestaurantCard)=>{
     return (props)=>{
         return (
         <div>
-            <label className="absolute bg-black text-white p-2 m-2 rounded-xl">Open</label>
+            <label className="absolute bg-black text-white p-2 m-2  rounded-xl">Open</label>
             <RestaurantCard resObj={props.resObj}/>
         </div>
         )

@@ -7,6 +7,7 @@ const RestaurantMenu=()=>{
     const [ResInfo,setResInfo]=useState(null);
     const {resId}=useParams();
     const [showIndex,setShowIndex]=useState(-1);
+    const [counter,setCounter]=useState(true);
 
 
 
@@ -41,7 +42,10 @@ const RestaurantMenu=()=>{
                 { 
 
                     //this is a controller component because component is controlling  
-                    categories.map((category,index)=><ResCategory key={category.card.card.itemCards.title} data={category.card.card} showItems={index===showIndex?true:false} setShowIndex={()=>{setShowIndex(index)}}/>)
+                    categories.map((category,index)=><ResCategory key={category.card.card.itemCards.title} data={category.card.card} showItems={index===showIndex?true:false} setShowIndex={()=>{
+                         setShowIndex(index)
+                        
+                    }}/>)
                 }
 
             </div>
